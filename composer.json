@@ -1,6 +1,6 @@
 {
-    "name": "animal/translate",
-    "description": "This extension provides translation of records. Has support for repeaters, templatefields and extension fieldtypes.",
+    "name": "juliavallina/translate",
+    "description": "A fork of animal/translate. This extension provides translation of records. Has support for repeaters, templatefields and extension fieldtypes.",
     "type": "bolt-extension",
     "require": {
         "bolt/bolt": "^3.0.11"
@@ -22,12 +22,8 @@
     ],
     "authors": [
         {
-            "name": "Svante Richter",
-            "email": "svante.richter@gmail.com"
-        },
-        {
-            "name": "Animal Design OG",
-            "email": "studio@animal.at"
+            "name": "Julia Vallina",
+            "email": "soyjulis@gmail.com"
         }
     ],
     "minimum-stability": "dev",
