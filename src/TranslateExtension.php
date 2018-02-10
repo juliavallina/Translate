@@ -259,6 +259,7 @@ class TranslateExtension extends SimpleExtension
             'twig',
             function (\Twig_Environment $twig) {
                 $twig->addGlobal('locales', $this->getCurrentLocaleStructure());
+                $twig->addGlobal('current_locale', $this->getCurrentLocale());
 
                 return $twig;
             }
@@ -316,6 +317,20 @@ class TranslateExtension extends SimpleExtension
         }
 
         return $locales;
+    }
+
+    /**
+     * Helper to get a the current locale structure
+     *
+     * @return array
+     */
+    public function getCurrentLocale()
+    {
+        $locales = $this->getCurrentLocaleStructure();
+        foreach ($locales as $key => $locale) {
+            if ($locale->get('active'))
+                return $locale->get('slug');
+        }
     }
 
     /**
